@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicCraft AI</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        .container{
+            width:90%;
+            max-width:900px;
+            margin:40px auto;
+            background:#fff;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        textarea,
+        input,
+        select{
+            width:100%;
+            padding:12px;
+            margin-top:15px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+        }
+
+        textarea{
+            height:180px;
+            resize:vertical;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:14px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 ComicCraft AI</h1>
+
+    <form action="/generate" method="post">
+
+        <textarea
+            name="prompt"
+            placeholder="Enter your comic story idea..."
+            required></textarea>
+
+        <input
+            type="text"
+            name="character"
+            placeholder="Enter Main Character Name"
+            required>
+
+        <select name="setting">
+            <option>School</option>
+            <option>Forest</option>
+            <option>Space</option>
+            <option>City</option>
+        </select>
+
+        <select name="tone">
+            <option>Funny</option>
+            <option>Dramatic</option>
+            <option>Poetic</option>
+            <option>Light-hearted</option>
+        </select>
+
+        <select name="style">
+            <option>Anime</option>
+            <option>Comic Book</option>
+            <option>Pixel Art</option>
+            <option>Realistic</option>
+        </select>
+
+        <button type="submit">
+            Generate Comic
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
